@@ -278,6 +278,7 @@ public class ClassUtils {
      * @param configurationHolder configuration
      */
     public static FieldCache declaredFields(Class<?> clazz, ConfigurationHolder configurationHolder) {
+        // properties注解，怀疑是这个
         switch (configurationHolder.globalConfiguration().getFiledCacheLocation()) {
             case THREAD_LOCAL:
                 Map<FieldCacheKey, FieldCache> fieldCacheMap = FIELD_THREAD_LOCAL.get();
